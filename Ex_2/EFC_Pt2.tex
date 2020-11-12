@@ -550,9 +550,9 @@ Macro F1 score:
     O valor de F1 score macro obtido para esta primeira solução foi de
 0.9486 no conjunto de teste.
 
-    \hypertarget{soluuxe7uxe3o-2---k-nearest-neighbors}{%
+    \hypertarget{soluuxe7uxe3o-2---k-nearest-neighbours}{%
 \section{Solução 2 - K-Nearest
-Neighbors}\label{soluuxe7uxe3o-2---k-nearest-neighbors}}
+Neighbours}\label{soluuxe7uxe3o-2---k-nearest-neighbours}}
 
 Para esta solução a normalização será diferente. Será utilizada a
 transformação de quantil, que realiza um mapeamento dos vetores de
@@ -629,7 +629,7 @@ cada classe, a precisão do modelo para àquela classe em porcentagem.
 \prompt{In}{incolor}{12}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{scorer} \PY{o}{=} \PY{n}{make\PYZus{}scorer}\PY{p}{(}\PY{n}{macro\PYZus{}f1\PYZus{}score}\PY{p}{,} \PY{n}{greater\PYZus{}is\PYZus{}better}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
-\PY{n}{n\PYZus{}neighbors\PYZus{}arr} \PY{o}{=} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{25}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{)}
+\PY{n}{n\PYZus{}neighbors\PYZus{}arr} \PY{o}{=} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{25}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
 
 \PY{n}{metrics} \PY{o}{=} \PY{p}{[}\PY{p}{]}
 
@@ -679,13 +679,52 @@ F1 Macro score using QuantileTransformer: 0.8691107868003255
     \begin{Verbatim}[commandchars=\\\{\}]
 ================================================================================
 ====================
-K: 7
-F1 Macro score using StandardScaler: 0.8858540687513677
-F1 Macro score using QuantileTransformer: 0.9054926746952954
+K: 4
+F1 Macro score using StandardScaler: 0.8745117500677186
+F1 Macro score using QuantileTransformer: 0.8933076638942151
     \end{Verbatim}
 
     \begin{center}
     \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EFC_Pt2_files/EFC_Pt2_22_3.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+================================================================================
+====================
+K: 6
+F1 Macro score using StandardScaler: 0.884924966626102
+F1 Macro score using QuantileTransformer: 0.9001286361157984
+    \end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EFC_Pt2_files/EFC_Pt2_22_5.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+================================================================================
+====================
+K: 8
+F1 Macro score using StandardScaler: 0.885778653954131
+F1 Macro score using QuantileTransformer: 0.9066756266523832
+    \end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EFC_Pt2_files/EFC_Pt2_22_7.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+================================================================================
+====================
+K: 10
+F1 Macro score using StandardScaler: 0.8875890295449381
+F1 Macro score using QuantileTransformer: 0.9092654960437176
+    \end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EFC_Pt2_files/EFC_Pt2_22_9.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -698,20 +737,59 @@ F1 Macro score using QuantileTransformer: 0.9080698251135607
     \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EFC_Pt2_files/EFC_Pt2_22_5.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EFC_Pt2_files/EFC_Pt2_22_11.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{Verbatim}[commandchars=\\\{\}]
 ================================================================================
 ====================
-K: 17
-F1 Macro score using StandardScaler: 0.8879696054743754
-F1 Macro score using QuantileTransformer: 0.906674410777855
+K: 14
+F1 Macro score using StandardScaler: 0.888381562555412
+F1 Macro score using QuantileTransformer: 0.9074087560850409
     \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EFC_Pt2_files/EFC_Pt2_22_7.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EFC_Pt2_files/EFC_Pt2_22_13.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+================================================================================
+====================
+K: 16
+F1 Macro score using StandardScaler: 0.8887085816255205
+F1 Macro score using QuantileTransformer: 0.9082609122300855
+    \end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EFC_Pt2_files/EFC_Pt2_22_15.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+================================================================================
+====================
+K: 18
+F1 Macro score using StandardScaler: 0.8887960519175682
+F1 Macro score using QuantileTransformer: 0.9084003715650754
+    \end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EFC_Pt2_files/EFC_Pt2_22_17.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+================================================================================
+====================
+K: 20
+F1 Macro score using StandardScaler: 0.885523141132622
+F1 Macro score using QuantileTransformer: 0.9070341856767463
+    \end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EFC_Pt2_files/EFC_Pt2_22_19.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -724,7 +802,20 @@ F1 Macro score using QuantileTransformer: 0.9051583494268681
     \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EFC_Pt2_files/EFC_Pt2_22_9.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EFC_Pt2_files/EFC_Pt2_22_21.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+================================================================================
+====================
+K: 24
+F1 Macro score using StandardScaler: 0.8877271140176051
+F1 Macro score using QuantileTransformer: 0.9037908033998331
+    \end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EFC_Pt2_files/EFC_Pt2_22_23.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -743,8 +834,10 @@ As classes 0, 1 e 4 são, na média, as classes que os modelos menos se
 confundem, tendo então a maior precisão.
 
     A tabela a seguir mostra os 5 melhores resultados obtidos utilizando o
-modelo KNN. Conclui-se que o melhor K foi \(K=12\), alcançando uma valor
-de F-score macro de 0.9081.
+modelo KNN, com as métricas dos modelos utilizando os dados normalizados
+por média e desvio padrão, e utilizando a transformação de quantile.
+Conclui-se que o melhor K foi \(K=10\), alcançando uma valor de F-score
+macro de 0.9092.
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
 \prompt{In}{incolor}{13}{\boxspacing}
@@ -759,18 +852,18 @@ de F-score macro de 0.9081.
 \prompt{Out}{outcolor}{13}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
     K  F1 Macro score  F1 Macro score (quantile)  \textbackslash{}
-2  12        0.886812                   0.908070
-3  17        0.887970                   0.906674
-1   7        0.885854                   0.905493
-4  22        0.885355                   0.905158
-0   2        0.850884                   0.869111
+4  10        0.887589                   0.909265
+8  18        0.888796                   0.908400
+7  16        0.888709                   0.908261
+5  12        0.886812                   0.908070
+6  14        0.888382                   0.907409
 
                                                model
-2  KNeighborsClassifier(n\_jobs=-1, n\_neighbors=12{\ldots}
-3  KNeighborsClassifier(n\_jobs=-1, n\_neighbors=17{\ldots}
-1  KNeighborsClassifier(n\_jobs=-1, n\_neighbors=7,{\ldots}
-4  KNeighborsClassifier(n\_jobs=-1, n\_neighbors=22{\ldots}
-0  KNeighborsClassifier(n\_jobs=-1, n\_neighbors=2,{\ldots}
+4  KNeighborsClassifier(n\_jobs=-1, n\_neighbors=10{\ldots}
+8  KNeighborsClassifier(n\_jobs=-1, n\_neighbors=18{\ldots}
+7  KNeighborsClassifier(n\_jobs=-1, n\_neighbors=16{\ldots}
+5  KNeighborsClassifier(n\_jobs=-1, n\_neighbors=12{\ldots}
+6  KNeighborsClassifier(n\_jobs=-1, n\_neighbors=14{\ldots}
 \end{Verbatim}
 \end{tcolorbox}
         
